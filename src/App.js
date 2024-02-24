@@ -9,22 +9,7 @@ function App() {
   const [total, settotal] = useState([0])
   const handleFormSubmit = (data) => {
     setformDataArray([...formDataArray, data])
-
-
-    {
-      data.ExpenseType === "credit" ? (
-        settotal([...total, parseFloat(data.Amount) + parseFloat(total[total.length - 1])])
-
-
-      ) : (
-      settotal([...total, parseFloat(total[total.length - 1]) - parseFloat(data.Amount)])
-
-    )
-    }
-
-
-
-
+    {data.ExpenseType === "credit" ? (settotal([...total, parseFloat(data.Amount) + parseFloat(total[total.length - 1])])) : (settotal([...total, parseFloat(total[total.length - 1]) - parseFloat(data.Amount)]))}
   }
   return (
     <div className="main">
