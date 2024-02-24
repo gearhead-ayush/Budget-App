@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import ExpenseForm from './Components/ExpenseForm';
+import ExpenseList from './Components/ExpenseList';
 import './App.css';
+import { useState } from 'react';
+
 
 function App() {
+  const [formDataArray, setformDataArray] = useState([])
+  const [total, settotal] = useState([0])
+  const handleFormSubmit = (data) => {
+    setformDataArray([...formDataArray, data])
+
+
+    {
+      data.ExpenseType === "credit" ? (
+        settotal([...total, parseFloat(data.Amount) + parseFloat(total[total.length - 1])])
+
+
+      ) : (
+      settotal([...total, parseFloat(total[total.length - 1]) - parseFloat(data.Amount)])
+
+    )
+    }
+
+
+
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <ExpenseForm onSubmit={handleFormSubmit} />
+      <ExpenseList formDataArray={formDataArray} total={total} />
     </div>
+
+
   );
 }
 

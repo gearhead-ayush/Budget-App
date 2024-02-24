@@ -1,13 +1,88 @@
-body {
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+
+.red{
+  color: red;
+  font-weight: bolder;
+  }
+.green{
+  font-weight: bolder;
+  color: green;
 }
+.card{
+  height: 13vh;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin: auto;
+}
+
+}
+.main{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh;}
+
+.container2 {
+  width: 25vw;
+  height: 60vh;
+  margin: 50px ;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.container1 {
+  width: 25vw;
+  height: 60vh;
+  margin: 50px ;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex label {
+  margin-bottom: 8px;
+}
+
+.flex input[type="text"],
+.flex input[type="number"],
+.flex select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+.flex input[type="submit"] {
+  background-color: #007bff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  
+}
+
