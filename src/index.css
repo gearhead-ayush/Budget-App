@@ -18,11 +18,66 @@ body {
   color: green;
 }
 .card{
-  height: 13vh;
-  width: 80%;
-  border: 2px solid black;
-  border-radius: 3px;
+  height: 8vh;
+  width: 96%;
+  margin-bottom: 1px;
+  border-radius: 5px;
+
+  background-color: hwb(0 95% 5%);
+}
+.logo{
+  position: relative;
+  height: 80%;
+  width: 12%;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+
   margin: auto;
+
+
+}
+.character{
+  margin: auto;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.mid{
+  width:40%;
+}
+
+.name{
+  font-weight: bolder;
+  font-size: larger;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.category{
+  font-style: italic;
+  margin-bottom: 3px;
+  font-size: small;
+}
+.price{
+  padding: 5px;
+  width: 35%;
+  align-items: center;
+  justify-content: center;
+  
+}
+.flex-row{
+  display: flex;
+
+  
+}
+.delete-icon{
+  margin: auto;
+}
+
+
+.summary2{
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 }
@@ -31,17 +86,33 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-top: 15vh;}
+}
 
 .container2 {
-  width: 25vw;
-  height: 60vh;
-  margin: 50px ;
+  position: relative;
+  width: 35vw;
+  height: 85vh;
+  margin: 30px ; 
   background-color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  
 }
+.list{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  
+  
+}
+.list2{
+  height: 86%;
+  overflow-y: scroll;
+}
+
+  
+
 
 .container1 {
   width: 25vw;
@@ -85,4 +156,26 @@ body {
   border-radius: 4px;
   
 }
+
+.summary-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.summary-table td, .summary-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.summary-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.summary-table tr:hover {
+  background-color: #ddd;
+}
+
+
+
 
