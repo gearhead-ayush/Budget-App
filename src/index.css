@@ -70,6 +70,7 @@ body {
 }
 .delete-icon{
   margin: auto;
+  cursor: pointer;
 }
 
 
@@ -98,6 +99,12 @@ body {
   border-radius: 10px;
   
 }
+.list2{
+  height: 86%;
+  overflow-y: scroll;
+}
+
+  
 .list{
   position: absolute;
   bottom: 0;
@@ -106,12 +113,7 @@ body {
   
   
 }
-.list2{
-  height: 86%;
-  overflow-y: scroll;
-}
 
-  
 
 
 .container1 {
@@ -176,6 +178,21 @@ body {
   background-color: #ddd;
 }
 
+
+.outer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.inner{
+  border-radius: 50%;
+  width: 42%;
+  aspect-ratio: 1;
+  background-color: white;
+
+ 
+}
 
 
 
