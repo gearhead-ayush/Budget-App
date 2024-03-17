@@ -2,6 +2,8 @@ import ExpenseForm from './Components/ExpenseForm';
 import ExpenseList from './Components/ExpenseList';
 import './App.css';
 import { useState } from 'react';
+import { allData } from './Components/Context/Context';
+
 
 
 
@@ -24,7 +26,7 @@ function App() {
     "Rent or Bills": "#003F5C",
     Miscellaneous: "#77DD77"
   }
-  
+
   const [formDataArray, setformDataArray] = useState([])
   const [total, settotal] = useState(0)
   const [totalCredit, settotalCredit] = useState(0)
@@ -99,9 +101,12 @@ function App() {
 
   return (
     <div className="main">
-      <ExpenseForm onSubmit={handleFormSubmit} chart={chart} />
-      <ExpenseList colors={colors} Delete={handleDelete} formDataArray={formDataArray} total={total} totalCredit={totalCredit} totalDebit={totalDebit} chart={chart} />
+      <allData.Provider value={{ chart, colors, formDataArray, total, totalCredit, totalDebit, handleDelete, handleFormSubmit }}>
 
+        <ExpenseForm />
+        <ExpenseList />
+
+      </allData.Provider>
     </div>
   );
 }

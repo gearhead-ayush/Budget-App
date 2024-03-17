@@ -1,7 +1,12 @@
 import React from 'react'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { allData } from './Context/Context'
 
-const ExpenseForm = ({ onSubmit, chart }) => {
+
+
+const ExpenseForm = () => {
+
+  const value = useContext(allData)
 
   const [data, setdata] = useState({ ExpenseName: "", ExpenseType: "credit", Category: "Income", Amount: "" })
 
@@ -12,7 +17,7 @@ const ExpenseForm = ({ onSubmit, chart }) => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    onSubmit(data)
+    value.handleFormSubmit(data)
     setdata({ ExpenseName: "", ExpenseType: "credit", Category: "Income", Amount: "" })
 
   };
@@ -40,8 +45,8 @@ const ExpenseForm = ({ onSubmit, chart }) => {
         <label>Category</label>
         <select name='Category' value={data.Category} onChange={handleChange} >
 
-          {chart.map((item) => (
-              <option value={item.name}>{item.name}</option>
+          {value.chart.map((item) => (
+            <option value={item.name}>{item.name}</option>
           ))}
 
         </select>
